@@ -1,0 +1,45 @@
+{% extends 'layout.html.twig' %}
+{% block head %}
+    {{parent()}}
+{% endblock %}
+{% block body %}
+	{{ parent() }}
+    <div class="container contentBody">
+
+      <section>
+        <header>
+            <h1>Music</h1>
+        </header>
+          <table class="music">
+            <tr>
+              <td>
+
+                <img src="/img/1200/itunes-logo.png">
+                <br />
+                <a href="https://itunes.apple.com/us/album/planet-gates/id1004644390" target="_blank" class="btn btn-info btn-sm">Listen on iTunes</a>
+
+              </td>
+              <td>
+                <img src="/img/1200/spotify-logo.png">
+                <br />
+                <a href="https://play.spotify.com/artist/6NuOslH44SY61wyfxAvRYB?play=true&utm_source=open.spotify.com&utm_medium=open" target="_blank" class="btn btn-info btn-sm">Listen on Spotify</a>
+              </td>
+              <td>
+                <img src="/img/1200/youtube-logo.png">
+                <br />
+                <a href="https://www.youtube.com/channel/UC8meESSgMGBwKijuodqIrXw" target="_blank" class="btn btn-info btn-sm">Listen on Youtube</a>
+              </td>
+              <td>
+                <img src="/img/1200/bandcamp-logo.png">
+                <br />
+                <a href="http://mailthehorse.bandcamp.com" target="_blank" class="btn btn-info btn-sm">Listen on Bandcamp</a>
+              </td>
+            </tr>
+          </table>
+          <br />
+          <br />
+      </section>
+
+    </div>
+{% endblock %}
+

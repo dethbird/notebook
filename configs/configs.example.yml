@@ -1,0 +1,10 @@
+google_api:
+  key: GOOGLE_MAPS_API_KEY
+instagram:
+  client_id: INSTAGRAM_CLIENT_ID
+  user_id: INSTAGRAM_USER_ID
+mailchimp:
+    key: MAILCHIMP_API_KEY
+    lists:
+        newsletter: 87175aa44a
+        website: c628d810b8
