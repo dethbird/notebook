@@ -45,7 +45,8 @@ for($i=0; $i<$mockDataConfigs['count']; $i++){
     $data = new stdClass();
     $data->class = $class;
     $data->type = $item['type'];
-    $data->id = $item['ids'][array_rand($item['ids'])];
+    // $data->id = $item['ids'][array_rand($item['ids'])];
+    $data->id = uniqid();
     $data->weight = rand(1,$mockDataConfigs['max-weight']);
     $mockData[] = $data;
 }

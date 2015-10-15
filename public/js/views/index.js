@@ -1,9 +1,35 @@
+var Note = Backbone.Model.extend({
+});
+var NotesCollection = Backbone.Collection.extend({
+    model: Note
+});
+var notes = new NotesCollection(data);
+
+var NotesView = Backbone.View.extend({
+    notes: notes,
+    events: {
+        "click .thumbnail": "selectPanel",
+        "click #viewer": "nextPanel"
+    },
+    initialize: function(){
+        $(this.el).sortable();
+        this.render();
+    },
+    render: function(){
+
+        var that = this;
+        var template = _.template($('#article-template').html());
+        $.each(this.notes.models, function(i,e){
+            $(that.el).append( template( { data: e.attributes }, {escape: false}) );
+        });
+
+
+    }
+});
+
+
 $(window).ready(function(){
-    $('main').sortable();
-    $('article').each(function(i,e){
-        e = $(e);
-        // console.log(e.data('weight'));
-        // console.log(6/e.data('weight') + 'em');
-        // e.css('font-size', 0.75 + (e.data('weight')/6) + 'em');
+    var notesView = new NotesView({
+        el: 'section#articles'
     });
 });

@@ -1,13 +1,18 @@
 {% extends 'layout.html.twig' %}
 {% block head %}
     {{parent()}}
+    <script type="text/javascript">
+        var data = {{data|json_encode|raw}}
+    </script>
     <script type="text/javascript" src="js/views/index.js"></script>
 {% endblock %}
 {% block body %}
 	{{ parent() }}
-    {% for item in data %}
-        <article class="{{item.class}}" data-id="{{item.id}}" data-weight="{{item.weight}}">
-            {{item.type}}
+    <section id="articles"></section>
+
+    <script type="text/template" id="article-template">
+        <article class="<%-data.class%>" data-id="<%-data.id%>" data-weight="<%-data.weight%>">
+            <%-data.type%>
         </article>
-    {% endfor %}
+    </script>
 {% endblock %}
