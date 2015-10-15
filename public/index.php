@@ -34,6 +34,24 @@ $configs = Yaml::parse(file_get_contents("../configs/configs.yml"));
 $app->container->set('configs', $configs);
 
 
+// data
+$mockDataConfigs = Yaml::parse(file_get_contents("../configs/mock-data-types.yml"));
+// echo "<pre>".print_r($mockDataConfigs,1)."</pre>"; die();
+$mockData = null;
+for($i=0; $i<$mockDataConfigs['count']; $i++){
+    $class = array_rand($mockDataConfigs['classes']);
+    $item = $mockDataConfigs['classes'][$class]['items'][array_rand($mockDataConfigs['classes'][$class]['items'])];
+
+    $data = new stdClass();
+    $data->class = $class;
+    $data->type = $item['type'];
+    $data->id = $item['ids'][array_rand($item['ids'])];
+    $data->weight = rand(1,$mockDataConfigs['max-weight']);
+    $mockData[] = $data;
+}
+$app->container->set('data', $mockData);
+// echo "<pre>".print_r($mockData,1)."</pre>"; die();
+
 
 // This is where a persistence layer ACL check would happen on authentication-related HTTP request items
 $authenticate = function ($app) {
@@ -54,11 +72,14 @@ $app->notFound(function () use ($app) {
 $app->get("/", $authenticate($app), function () use ($app) {
 
     $configs = $app->container->get('configs');
+    $data = $app->container->get('data');
 
+    // die(json_encode($data));
     $app->render(
         'partials/index.html.twig',
         array(
             "configs" => $configs,
+            "data" => $data,
             "section" => "index"
         ),
         200

@@ -5,58 +5,9 @@
 {% endblock %}
 {% block body %}
 	{{ parent() }}
-    <div class="container contentBody">
-
-      <div class="feed-container pull-left">
-
-        <section>
-          <header>
-            <h1>On Instagram</h1>
-          </header>
-          {% for post in instagramData %}
-            {{post.html|raw}}<br />
-          {% endfor %}
-        </section>
-
-        <section>
-          <header>
-            <h1>On Twitter</h1>
-          </header>
-          <a class="twitter-timeline" href="https://twitter.com/MailtheHorse" data-widget-id="645706018031210497" width="340" height="800" data-chrome="nofooter noborders noscrollbar">Tweets by @MailtheHorse</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        </section>
-        <br />
-      </div>
-
-
-      <div class="column pull-right">
-
-        <section>
-          <header>
-            <h1>Shows</h1>
-          </header>
-          <script type='text/javascript' src='http://widget.bandsintown.com/javascripts/bit_widget.js'></script><a href="http://www.bandsintown.com/Mail%20the%20Horse" class="bit-widget-initializer" data-artist="Mail the Horse" data-width="600px">Mail the Horse Tour Dates</a>
-        </section>
-
-        <section>
-          <header>
-            <h1>News</h1>
-          </header>
-
-          {% for post in wordpressData %}
-
-          <hr/>
-
-          <a href="{{post.link}}" target="_blank"><h3>{{post.title.rendered|raw}}</h3></a>
-          <small>{{post.date|date("F j, Y")}}</small><br />
-
-          {{post.content.rendered|raw}}
-
-          {% endfor %}
-          
-        </section>
-      </div>
-
-    </div>
+    {% for item in data %}
+        <article class="{{item.class}}" data-id="{{item.id}}" data-weight="{{item.weight}}">
+            {{item.type}}
+        </article>
+    {% endfor %}
 {% endblock %}
-

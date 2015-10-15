@@ -1,0 +1,28 @@
+# Notebook
+site:
+  title: "Notebook"
+  description: "Personal pages"
+  url: "http://notebook.artistcontrolbox.com"
+google_api:
+  key: "AIzaSyCybIgvVt-vmF47yFzmKqGYXHe8r1LOzJs"
+instagram:
+  client_id: "a6c4e37cd91b4020a09a74a40cf836d6"
+  user_id: "363053413"
+wordpress:
+    url: http://blog.mailthehorse.com 
+mailchimp:
+    key: "bc34c45d07d6cf11bb2f224274d6f932-us10"
+    lists:
+        newsletter: 87175aa44a
+        website: c628d810b8
+contact_form:
+    subject: "Contact Form Submission"
+    from:
+        email: "mailthehorse@gmail.com"
+        name: "Mail the Horse Website"
+    to:
+        - "mailthehorse@gmail.com"
+    cc:
+        - "sopher12@gmail.com"
+    bcc:
+        - "rishi.satsangi@gmail.com"

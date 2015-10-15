@@ -1,0 +1,10 @@
+collections
+  -
+    -
+      class: twitter
+      item: tweet
+      item_id: 12345
+    -
+      class: instagram
+      item: photo
+      shortcode: 9384723984732

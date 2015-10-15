@@ -1,0 +1,109 @@
+count: 30
+max-weight: 6
+classes:
+    note:
+      items:
+        -
+          type: markdown
+          ids:
+            - 3487238764
+            - 2394763274
+            - 23746328746
+    foursquare:
+      items:
+        -
+          type: place
+          ids:
+            - 3487238764
+            - 2394763274
+            - 23746328746
+    goodreads:
+      items:
+        -
+          type: book
+          ids:
+            - 3487238764
+            - 2394763274
+            - 23746328746
+    google_docs:
+      items:
+        -
+          type: document
+          ids:
+            - 3487238764
+            - 2394763274
+            - 23746328746
+    google_maps:
+      items:
+        -
+          type: place
+          ids:
+            - 3487238764
+            - 2394763274
+            - 23746328746
+    instagram:
+      items:
+        -
+          type: photo
+          ids:
+            - 3487238764
+            - 2394763274
+            - 23746328746
+        -
+          type: video
+          ids:
+            - 3487238764
+            - 2394763274
+            - 23746328746
+    spotify:
+      items:
+        -
+          type: track
+          ids:
+            - 3487238764
+            - 2394763274
+            - 23746328746
+        -
+          type: playlist
+          ids:
+            - 3487238764
+            - 2394763274
+            - 23746328746
+    trello:
+      items:
+        -
+          type: board
+          ids:
+            - 3487238764
+            - 2394763274
+            - 23746328746
+    twitter:
+      items:
+        -
+          type: tweet
+          ids:
+            - 123345
+            - 2368263
+            - 234982374
+    youtube:
+      items:
+        -
+          type: video
+          ids:
+            - 3487238764
+            - 2394763274
+            - 23746328746
+        -
+          type: playlist
+          ids:
+            - 3487238764
+            - 2394763274
+            - 23746328746
+    wordpress:
+      items:
+        -
+          type: post
+          ids:
+            - 3487238764
+            - 2394763274
+            - 23746328746

@@ -2,8 +2,9 @@
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="UTF-8">
-    <title>Mail the Horse</title>
+    <title>{{configs.site.title}}</title>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.1/backbone-min.js"></script>
@@ -80,13 +81,10 @@
     {% block head %}{% endblock %}
   </head>
   <body data-grid-framework="bo" data-grid-color="blue" data-grid-opacity="0.5" data-grid-zindex="10" data-grid-gutterwidth="30px" data-grid-nbcols="16">
-  <div id="main">
+  <main>
     {% block body %}{% endblock %}
-  </div>
-  <div id="footer">
-      <section>
-        &copy 2015 Mail the Horse <span class="created_by">Created by <a href="http://dethbird.com" target="_blank">@dethbird</a></span>
-      </section>
-  </div>
+  <main>
+  <footer>
+  </footer>
   </body>
 </html>
