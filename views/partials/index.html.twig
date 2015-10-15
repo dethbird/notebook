@@ -11,8 +11,9 @@
     <section id="articles"></section>
 
     <script type="text/template" id="article-template">
-        <article class="<%-data.class%>" data-id="<%-data.id%>" data-weight="<%-data.weight%>">
-            <%-data.type%>
+        <article class="<%-data.class%> col-xs-<%-data.cols%> rows-<%-data.weight%>" data-id="<%-data.id%>" data-weight="<%-data.weight%>">
+            <icon class="<%-data.class%> pull-left"></icon>
+            <div class="content"><%-data.type%></div>
         </article>
     </script>
 {% endblock %}

@@ -1,5 +1,5 @@
-count: 30
-max-weight: 6
+count: 150
+max-weight: 3
 classes:
     note:
       items:
