@@ -12,15 +12,6 @@ var NotesView = Backbone.View.extend({
         // "click #viewer": "nextPanel"
     },
     initialize: function(){
-        // $(this.el).sortable({
-        //     start: function(i,e){
-        //         $(this).find('article').removeClass('animation-target');
-        //     },
-        //     stop: function(i,e){
-        //         // console.log(e.item);
-        //         e.item.addClass('animation-target');
-        //     }
-        // });
         this.render();
     },
     render: function(){
@@ -28,18 +19,20 @@ var NotesView = Backbone.View.extend({
         var that = this;
         var template = _.template($('#article-template').html());
         $.each(this.notes.models, function(i,e){
-            e.set('cols', 0 + e.get('weight'));
-            e.set('rows', 50 * e.get('weight'));
+            e.set('col', i%6);
+            e.set('row', i+1);
             $(that.el).append( template( { data: e.attributes }, {escape: false}) );
         });
 
-        $('section#articles').sortable({
-            items: 'article',
-            grid: [160, 50],
-            tolerance: "pointer"
-        });
-
-        // $('section#articles').gridster();
+        gridster = $(".gridster > ul").gridster({
+            widget_margins: [10, 10],
+            widget_base_dimensions: [100, 60],
+            helper: 'clone',
+            resize: {
+                enabled: true,
+                max_size: [3, 4]
+            }
+        }).data('gridster');
 
     }
 });
@@ -47,6 +40,6 @@ var NotesView = Backbone.View.extend({
 
 $(window).ready(function(){
     var notesView = new NotesView({
-        el: 'section#articles'
+        el: 'ul#articles'
     });
 });

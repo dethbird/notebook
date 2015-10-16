@@ -8,12 +8,36 @@
 {% endblock %}
 {% block body %}
 	{{ parent() }}
-    <section id="articles"></section>
+    <div class="gridster">
+        <ul id="articles">
+        </ul>
+    </div>
 
     <script type="text/template" id="article-template">
-        <article class="<%-data.class%> col-xs-<%-data.cols%> rows-<%-data.weight%>" data-id="<%-data.id%>" data-weight="<%-data.weight%>">
+        <li class="<%-data.class%>" data-id="<%-data.id%>" data-row="1" data-col="2" data-sizex="1" data-sizey="1">
             <icon class="<%-data.class%> pull-left"></icon>
             <div class="content"><%-data.type%></div>
-        </article>
+        </li>
     </script>
+<!--
+    <div class="gridster">
+    <ul>
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1"></li>
+        <li data-row="1" data-col="1" data-sizex="4" data-sizey="1"></li>
+        <li data-row="3" data-col="1" data-sizex="1" data-sizey="1"></li>
+
+        <li data-row="1" data-col="2" data-sizex="2" data-sizey="1"> simply using GRIDSTER</li>
+        <li data-row="2" data-col="2" data-sizex="2" data-sizey="2">http://gridster.net/</li>
+
+        <li data-row="1" data-col="4" data-sizex="1" data-sizey="1"></li>
+        <li data-row="2" data-col="4" data-sizex="2" data-sizey="1"></li>
+        <li data-row="3" data-col="4" data-sizex="1" data-sizey="1"></li>
+
+        <li data-row="1" data-col="5" data-sizex="1" data-sizey="1"></li>
+        <li data-row="3" data-col="5" data-sizex="1" data-sizey="1"></li>
+
+        <li data-row="1" data-col="6" data-sizex="1" data-sizey="1"></li>
+        <li data-row="2" data-col="6" data-sizex="1" data-sizey="2"></li>
+    </ul> -->
+</div>
 {% endblock %}

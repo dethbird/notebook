@@ -1,8 +1,8 @@
 body {
   padding: 15px;
 }
-article {
-    margin: 5px 5px 0px 0px;
+ul{list-style:none}
+li {
     padding: 10px;
     border: 1px solid #CCC;
     background-color: #fff;
@@ -10,9 +10,10 @@ article {
     background-position: 10px;*/
     cursor: pointer;
     box-shadow: 3px 3px 6px rgba(0,0,0,0.15);
+    display: inline-block;
 
 }
-article > icon {
+li > icon {
   margin-right: 10px;
 }
 icon {
