@@ -1,20 +1,35 @@
 body {
   padding: 15px;
+  background-color: #222;
+  font-size: 1em;
 }
 ul{list-style:none}
-li {
-    padding: 10px;
-    border: 1px solid #CCC;
-    background-color: #fff;
-    /*background-repeat: no-repeat;
-    background-position: 10px;*/
+ul#articles > li {
+    color: white;
+    padding: 5px;
+    border: 1px solid #666;
+    background-color: #333;
     cursor: pointer;
     box-shadow: 3px 3px 6px rgba(0,0,0,0.15);
     display: inline-block;
-
+    word-wrap: break-word;
+    overflow: hidden;
 }
-li > icon {
-  margin-right: 10px;
+ul#articles > li > icon {
+  margin: 0px 10px 10px 0px;
+  float:left;
+}
+ul#articles > li[data-sizex="1"] div.content img {
+  max-width:95px;
+  height: auto;
+}
+ul#articles > li[data-sizex="2"] div.content img {
+  max-width:200px;
+  height: auto;
+}
+ul#articles > li[data-sizex="3"] div.content img {
+  max-width:300px;
+  height: auto;
 }
 icon {
     min-width: 24px;

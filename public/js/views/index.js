@@ -4,9 +4,13 @@ var NotesCollection = Backbone.Collection.extend({
     model: Note
 });
 var notes = new NotesCollection(data);
-
 var NotesView = Backbone.View.extend({
     notes: notes,
+    md: new markdownit({
+      html: true,
+      linkify: true,
+      typographer: true
+    }),
     events: {
         // "click .thumbnail": "selectPanel",
         // "click #viewer": "nextPanel"
@@ -21,12 +25,20 @@ var NotesView = Backbone.View.extend({
         $.each(this.notes.models, function(i,e){
             e.set('col', i%6);
             e.set('row', i+1);
-            $(that.el).append( template( { data: e.attributes }, {escape: false}) );
+            var item = $(template( { data: e.attributes }, {escape: false}));
+            $(that.el).append( item );
+            // console.log(e.get('note'));
+            if(e.get('content')!==undefined) {
+                var contentTemplate = _.template($('#template-' + e.get('class') + '-' + e.get('type')).html());
+                var content = $(contentTemplate( { data: e.get('content') }, {escape: false}));
+                $(item).find('div.content').html(content);
+            }
+            $(item).find('div.note').html(that.md.render(e.get('note')));
         });
 
         gridster = $(".gridster > ul").gridster({
-            widget_margins: [10, 10],
-            widget_base_dimensions: [100, 60],
+            widget_margins: [5, 5],
+            widget_base_dimensions: [100, 100],
             helper: 'clone',
             resize: {
                 enabled: true,

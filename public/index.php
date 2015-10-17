@@ -40,14 +40,22 @@ $mockDataConfigs = Yaml::parse(file_get_contents("../configs/mock-data-types.yml
 $mockData = null;
 for($i=0; $i<$mockDataConfigs['count']; $i++){
     $class = array_rand($mockDataConfigs['classes']);
-    $item = $mockDataConfigs['classes'][$class]['items'][array_rand($mockDataConfigs['classes'][$class]['items'])];
+
+    $itemTypes = array_keys($mockDataConfigs['classes'][$class]['items']);
+    $itemType = $itemTypes[array_rand($itemTypes)];
 
     $data = new stdClass();
     $data->class = $class;
-    $data->type = $item['type'];
-    // $data->id = $item['ids'][array_rand($item['ids'])];
+    $data->type = $itemType;
     $data->id = uniqid();
-    $data->weight = rand(1,$mockDataConfigs['max-weight']);
+    $data->sizex = rand(1,$mockDataConfigs['max-sizex']);
+    $data->sizey = rand(1,$mockDataConfigs['max-sizey']);
+    $data->note = "#### title\n\n* farts\n* pizza";
+
+    if($class=='instagram' && $itemType=='photo') {
+        $contentIndex = array_rand($mockDataConfigs['classes'][$class]['items'][$itemType]['content']);
+        $data->content = json_decode($mockDataConfigs['classes'][$class]['items'][$itemType]['content'][$contentIndex]);
+    }
     $mockData[] = $data;
 }
 $app->container->set('data', $mockData);

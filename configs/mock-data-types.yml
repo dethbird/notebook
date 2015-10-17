@@ -1,108 +1,94 @@
-count: 35
-max-weight: 3
+count: 120
+max-sizex: 3
+max-sizey: 4
 classes:
     note:
       items:
-        -
-          type: markdown
+        markdown:
           ids:
             - 3487238764
             - 2394763274
             - 23746328746
     foursquare:
       items:
-        -
-          type: place
+        place:
           ids:
             - 3487238764
             - 2394763274
             - 23746328746
     goodreads:
       items:
-        -
-          type: book
+        book:
           ids:
             - 3487238764
             - 2394763274
             - 23746328746
     google_docs:
       items:
-        -
-          type: document
+        document:
           ids:
             - 3487238764
             - 2394763274
             - 23746328746
     google_maps:
       items:
-        -
-          type: place
+        place:
           ids:
             - 3487238764
             - 2394763274
             - 23746328746
     instagram:
       items:
-        -
-          type: photo
-          ids:
-            - 3487238764
-            - 2394763274
-            - 23746328746
-        -
-          type: video
+        photo:
+          content:
+            - >
+              {"provider_url":"https:\/\/instagram.com\/","media_id":"1097373296066626766_4810832","author_name":"teamcoco","height":null,"thumbnail_url":"https:\/\/scontent-lga3-1.cdninstagram.com\/hphotos-xaf1\/t51.2885-15\/e35\/12132825_873825346046997_607706172_n.jpg","thumbnail_width":640,"thumbnail_height":427,"provider_name":"Instagram","title":"#CONAN. #Beard. #Smokingjacket. #fbf","html":"\u003cblockquote class=\"instagram-media\" data-instgrm-captioned data-instgrm-version=\"5\" style=\" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);\"\u003e\u003cdiv style=\"padding:8px;\"\u003e \u003cdiv style=\" background:#F8F8F8; line-height:0; margin-top:40px; padding:33.359375% 0; text-align:center; width:100%;\"\u003e \u003cdiv style=\" background:url(data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf\/\/42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB\/lQPb79drWOyJVa\/DAvg9B\/rLB4cC+Nqgdz\/TvBbBnr6GBReqn\/nRmDgaQEej7WhonozjF+Y2I\/fZou\/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;\"\u003e\u003c\/div\u003e\u003c\/div\u003e \u003cp style=\" margin:8px 0 0 0; padding:0 4px;\"\u003e \u003ca href=\"https:\/\/instagram.com\/p\/86pzLaDQTO\/\" style=\" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;\" target=\"_blank\"\u003e#CONAN. #Beard. #Smokingjacket. #fbf\u003c\/a\u003e\u003c\/p\u003e \u003cp style=\" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;\"\u003eA photo posted by CONAN on TBS (@teamcoco) on \u003ctime style=\" font-family:Arial,sans-serif; font-size:14px; line-height:17px;\" datetime=\"2015-10-16T23:11:52+00:00\"\u003eOct 16, 2015 at 4:11pm PDT\u003c\/time\u003e\u003c\/p\u003e\u003c\/div\u003e\u003c\/blockquote\u003e\n\u003cscript async defer src=\"\/\/platform.instagram.com\/en_US\/embeds.js\"\u003e\u003c\/script\u003e","width":658,"version":"1.0","author_url":"https:\/\/instagram.com\/teamcoco","author_id":4810832,"type":"rich"}
+        video:
           ids:
             - 3487238764
             - 2394763274
             - 23746328746
     spotify:
       items:
-        -
-          type: track
+        track:
           ids:
             - 3487238764
             - 2394763274
             - 23746328746
-        -
-          type: playlist
+        playlist:
           ids:
             - 3487238764
             - 2394763274
             - 23746328746
     trello:
       items:
-        -
-          type: board
+        board:
           ids:
             - 3487238764
             - 2394763274
             - 23746328746
     twitter:
       items:
-        -
-          type: tweet
+        tweet:
           ids:
             - 123345
             - 2368263
             - 234982374
     youtube:
       items:
-        -
-          type: video
+        video:
           ids:
             - 3487238764
             - 2394763274
             - 23746328746
-        -
-          type: playlist
+        playlist:
           ids:
             - 3487238764
             - 2394763274
             - 23746328746
     wordpress:
       items:
-        -
-          type: post
+        post:
           ids:
             - 3487238764
             - 2394763274
