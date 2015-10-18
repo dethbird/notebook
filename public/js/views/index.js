@@ -29,7 +29,7 @@ var NotesView = Backbone.View.extend({
 
             if(e.get('content')!==undefined) {
 
-                // if(e.get('class')=="trello"){
+                // if(e.get('class')=="twitter"){
                 //     // console.log(JSON.stringify(e.get('content')));
                 //     console.log(e.get('content'));
                 // }
@@ -60,7 +60,7 @@ var NotesView = Backbone.View.extend({
             $.each($('div.tweet'), function(i,e){
                 tweet_id = $(e).data('tweet-id');
                 twttr.widgets.createTweet(
-                    String(tweet_id),
+                    '' + tweet_id,
                     e,
                     {
                       width: 200

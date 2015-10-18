@@ -66,6 +66,12 @@ for($i=0; $i<$mockDataConfigs['count']; $i++){
         // } else {
             $data->content = json_decode($mockDataConfigs['classes'][$class]['items'][$itemType]['content'][$contentIndex]);
         // }
+        //
+        if($class=="twitter") {
+            $data->content = (string) $mockDataConfigs['classes'][$class]['items'][$itemType]['content'][$contentIndex];
+        } else {
+            $data->content = json_decode($mockDataConfigs['classes'][$class]['items'][$itemType]['content'][$contentIndex]);
+        }
 
     }
     $mockData[] = $data;
