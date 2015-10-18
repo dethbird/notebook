@@ -21,9 +21,9 @@
     <!-- TEMPLATES -->
     <script type="text/template" id="article-template">
         <li class="<%-data.class%>" data-id="<%-data.id%>" data-row="1" data-col="2" data-sizex="<%-data.sizex%>" data-sizey="<%-data.sizey%>">
-            <icon class="<%-data.class%> pull-left" title="<%-data.class%> (<%-data.type%>)"></icon>
             <div class="content"></div>
             <div class="note"></div>
+            <icon class="<%-data.class%> pull-left" title="<%-data.class%> (<%-data.type%>)"></icon>
         </li>
     </script>
 
@@ -41,6 +41,15 @@
     <script type="text/template" id="template-spotify-track">
         <img src="<%-data.album.images[0].url%>" /><br />
         <audio controls><source src="<%-data.preview_url%>" type="audio/mpeg"></audio>
+    </script>
+
+    <script type="text/template" id="template-trello-board">
+        <div>
+            <h5><%-data.name%></h5>
+            last: <%-data.dateLastActivity%><br />
+            <a href="<%-data.url%>" target="_blank" class="btn btn-default btn-xs">view</a><br />
+
+        </div>
     </script>
 
     <script type="text/template" id="template-twitter-tweet">

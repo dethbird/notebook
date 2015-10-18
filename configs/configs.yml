@@ -11,6 +11,9 @@ google_api:
 instagram:
   client_id: "a6c4e37cd91b4020a09a74a40cf836d6"
   user_id: "363053413"
+trello:
+  key: "896fdb24e5fe4a75036896df9d496bbd"
+  secret: "db9edb967c4997e6326202b20321c732362c3eb4d28e1abacfcff1a7317d4108"
 wordpress:
     url: http://blog.mailthehorse.com
 mailchimp:

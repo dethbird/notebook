@@ -16,8 +16,12 @@ ul#articles > li {
     overflow: hidden;
 }
 ul#articles > li > icon {
-  margin: 0px 10px 10px 0px;
-  float:left;
+  /*margin: 0px 10px 10px 0px;*/
+
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+  /*float:left;*/
 }
 ul#articles > li[data-sizex="1"] div.content img,
 ul#articles > li[data-sizex="1"] div.content iframe {
@@ -37,7 +41,6 @@ ul#articles > li[data-sizex="3"] div.content iframe {
 icon {
     min-width: 24px;
     min-height: 24px;
-    display: inline-block;
 }
 icon.foursquare {
     background-image: url("../img/logo-foursquare-24.png");

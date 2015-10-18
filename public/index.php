@@ -60,12 +60,12 @@ for($i=0; $i<$mockDataConfigs['count']; $i++){
 
     if (isset($mockDataConfigs['classes'][$class]['items'][$itemType]['content'])) {
         $contentIndex = array_rand($mockDataConfigs['classes'][$class]['items'][$itemType]['content']);
-        if($class=="goodreads") {
-            $xmlObject = simplexml_load_file($mockDataConfigs['classes'][$class]['items'][$itemType]['content'][$contentIndex], null, LIBXML_NOCDATA);
-            $data->content = json_decode(json_encode($xmlObject));
-        } else {
+        // if($class=="goodreads") {
+        //     $xmlObject = simplexml_load_file($mockDataConfigs['classes'][$class]['items'][$itemType]['content'][$contentIndex], null, LIBXML_NOCDATA);
+        //     $data->content = json_decode(json_encode($xmlObject));
+        // } else {
             $data->content = json_decode($mockDataConfigs['classes'][$class]['items'][$itemType]['content'][$contentIndex]);
-        }
+        // }
 
     }
     $mockData[] = $data;
