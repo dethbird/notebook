@@ -2,6 +2,12 @@ count: 120
 max-sizex: 4
 max-sizey: 4
 classes:
+    link:
+      items:
+        web:
+          content:
+            - >
+              {"url":"http://google.com", "title": "Google"}
     note:
       items:
         markdown:

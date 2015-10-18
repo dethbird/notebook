@@ -38,6 +38,13 @@
         <img src="<%-data.thumbnail_url%>" />
     </script>
 
+    <script type="text/template" id="template-link-web">
+        <div>
+            <%-data.title%><br />
+            <%-data.url%>
+            </div>
+    </script>
+
     <script type="text/template" id="template-spotify-track">
         <img src="<%-data.album.images[0].url%>" /><br />
         <audio controls><source src="<%-data.preview_url%>" type="audio/mpeg"></audio>
@@ -46,8 +53,8 @@
     <script type="text/template" id="template-trello-board">
         <div>
             <h5><%-data.name%></h5>
-            last: <%-data.dateLastActivity%><br />
-            <a href="<%-data.url%>" target="_blank" class="btn btn-default btn-xs">view</a><br />
+            last: <span class="timeago" title="<%-data.dateLastActivity%>"><%-data.dateLastActivity%></span><br />
+            <a href="<%-data.url%>" target="_blank" class="btn btn-info btn-xs">view</a><br />
 
         </div>
     </script>

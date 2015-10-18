@@ -42,13 +42,16 @@ var NotesView = Backbone.View.extend({
 
         });
 
+        //timeago
+        $("span.timeago").timeago();
+
         gridster = $(".gridster > ul").gridster({
             widget_margins: [5, 5],
             widget_base_dimensions: [100, 100],
             helper: 'clone',
             resize: {
                 enabled: true,
-                max_size: [3, 4]
+                max_size: [4, 4]
             }
         }).data('gridster');
 

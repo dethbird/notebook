@@ -17,18 +17,23 @@ trello:
 wordpress:
     url: http://blog.mailthehorse.com
 mailchimp:
-    key: "bc34c45d07d6cf11bb2f224274d6f932-us10"
-    lists:
-        newsletter: 87175aa44a
-        website: c628d810b8
+  key: "bc34c45d07d6cf11bb2f224274d6f932-us10"
+  lists:
+    newsletter: 87175aa44a
+    website: c628d810b8
+yelp:
+  key: "LURBB4QXt8P0libKvxc5Pw"
+  secret: "G9w77j7aalkc2hpyMqQ9BCWM-F0"
+  token: "alowBBOrV-Ze33z4f3gtIaabMe-YJIi2"
+  token_secret: "c19FlBaSUCTvVYopCrrZwVwcZNs"
 contact_form:
-    subject: "Contact Form Submission"
-    from:
-        email: "mailthehorse@gmail.com"
-        name: "Mail the Horse Website"
-    to:
-        - "mailthehorse@gmail.com"
-    cc:
-        - "sopher12@gmail.com"
-    bcc:
-        - "rishi.satsangi@gmail.com"
+  subject: "Contact Form Submission"
+  from:
+    email: "mailthehorse@gmail.com"
+    name: "Mail the Horse Website"
+  to:
+    - "mailthehorse@gmail.com"
+  cc:
+    - "sopher12@gmail.com"
+  bcc:
+    - "rishi.satsangi@gmail.com"
