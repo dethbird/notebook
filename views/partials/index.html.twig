@@ -43,6 +43,10 @@
         <audio controls><source src="<%-data.preview_url%>" type="audio/mpeg"></audio>
     </script>
 
+    <script type="text/template" id="template-twitter-tweet">
+        <div class="tweet" data-tweet-id="<%-data%>"></div>
+    </script>
+
      <script type="text/template" id="template-youtube-video">
         <iframe id="ytplayer" type="text/html" src="http://www.youtube.com/embed/<%-data.id%>?autoplay=0" frameborder="0"></iframe>
     </script>

@@ -31,12 +31,11 @@ var NotesView = Backbone.View.extend({
             $(item).find('div.note').html(that.md.render(e.get('note')));
 
             if(e.get('content')!==undefined) {
-                // if(e.get('class')=="goodreads"){
-                //     console.log(e);
-                // }
+
                 var contentTemplate = _.template($('#template-' + e.get('class') + '-' + e.get('type')).html());
                 var content = $(contentTemplate( { data: e.get('content') }, {escape: false}));
                 $(item).find('div.content').html(content);
+
             }
 
         });
@@ -50,6 +49,21 @@ var NotesView = Backbone.View.extend({
                 max_size: [3, 4]
             }
         }).data('gridster');
+
+         //twitter
+        twttr.ready(function(){
+            console.log('twitter ready');
+            $.each($('div.tweet'), function(i,e){
+                tweet_id = $(e).data('tweet-id');
+                twttr.widgets.createTweet(
+                    String(tweet_id),
+                    e,
+                    {
+                      width: 200
+                    }
+                );
+            });
+        });
 
     }
 });
