@@ -56,7 +56,7 @@ for($i=0; $i<$mockDataConfigs['count']; $i++){
     $data->id = uniqid();
     $data->sizex = rand(1,$mockDataConfigs['max-sizex']);
     $data->sizey = rand(1,$mockDataConfigs['max-sizey']);
-    $data->note = "asdfisdfisdfh";
+    $data->comments = "asdfisdfisdfh";
 
     if (isset($mockDataConfigs['classes'][$class]['items'][$itemType]['content'])) {
         $contentIndex = array_rand($mockDataConfigs['classes'][$class]['items'][$itemType]['content']);
@@ -64,13 +64,25 @@ for($i=0; $i<$mockDataConfigs['count']; $i++){
         //     $xmlObject = simplexml_load_file($mockDataConfigs['classes'][$class]['items'][$itemType]['content'][$contentIndex], null, LIBXML_NOCDATA);
         //     $data->content = json_decode(json_encode($xmlObject));
         // } else {
-            $data->content = json_decode($mockDataConfigs['classes'][$class]['items'][$itemType]['content'][$contentIndex]);
+            // $data->content = json_decode($mockDataConfigs['classes'][$class]['items'][$itemType]['content'][$contentIndex]);
         // }
         //
-        if($class=="twitter") {
-            $data->content = (string) $mockDataConfigs['classes'][$class]['items'][$itemType]['content'][$contentIndex];
-        } else {
-            $data->content = json_decode($mockDataConfigs['classes'][$class]['items'][$itemType]['content'][$contentIndex]);
+        // if ($itemType, array("tweet", "markdown"))) {
+        //     $data->content = (string) $mockDataConfigs['classes'][$class]['items'][$itemType]['content'][$contentIndex];
+        //     var_dump($data->content);
+        // } else {
+        //     $data->content = json_decode($mockDataConfigs['classes'][$class]['items'][$itemType]['content'][$contentIndex]);
+        // }
+
+        switch($itemType) {
+            case "tweet":
+                $data->content = (string) $mockDataConfigs['classes'][$class]['items'][$itemType]['content'][$contentIndex];
+                break;
+            case "markdown":
+                $data->content = "#### pizza\n* you like pizza\n* i like pizzza\n* what the hell man";
+                break;
+            default:
+                $data->content = json_decode($mockDataConfigs['classes'][$class]['items'][$itemType]['content'][$contentIndex]);
         }
 
     }

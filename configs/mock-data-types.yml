@@ -11,10 +11,8 @@ classes:
     note:
       items:
         markdown:
-          ids:
-            - 3487238764
-            - 2394763274
-            - 23746328746
+          content:
+            - string
     foursquare:
       items:
         place:
