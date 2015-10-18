@@ -52,7 +52,7 @@ for($i=0; $i<$mockDataConfigs['count']; $i++){
     $data->sizey = rand(1,$mockDataConfigs['max-sizey']);
     $data->note = "asdfisdfisdfh";
 
-    if (in_array($class, array("instagram", "youtube"))) {
+    if (isset($mockDataConfigs['classes'][$class]['items'][$itemType]['content'])) {
         $contentIndex = array_rand($mockDataConfigs['classes'][$class]['items'][$itemType]['content']);
         $data->content = json_decode($mockDataConfigs['classes'][$class]['items'][$itemType]['content'][$contentIndex]);
     }

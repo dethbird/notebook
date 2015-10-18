@@ -25,15 +25,20 @@ var NotesView = Backbone.View.extend({
         $.each(this.notes.models, function(i,e){
             e.set('col', i%6);
             e.set('row', i+1);
+            
             var item = $(template( { data: e.attributes }, {escape: false}));
             $(that.el).append( item );
-            // console.log(e.get('note'));
+            $(item).find('div.note').html(that.md.render(e.get('note')));
+
             if(e.get('content')!==undefined) {
+                // if(e.get('class')=="spotify"){
+                //     console.log(e);
+                // }
                 var contentTemplate = _.template($('#template-' + e.get('class') + '-' + e.get('type')).html());
                 var content = $(contentTemplate( { data: e.get('content') }, {escape: false}));
                 $(item).find('div.content').html(content);
             }
-            $(item).find('div.note').html(that.md.render(e.get('note')));
+
         });
 
         gridster = $(".gridster > ul").gridster({

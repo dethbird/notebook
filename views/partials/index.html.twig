@@ -32,6 +32,11 @@
         <img src="<%-data.thumbnail_url%>" />
     </script>
 
+    <script type="text/template" id="template-spotify-track">
+        <img src="<%-data.album.images[0].url%>" /><br />
+        <audio controls><source src="<%-data.preview_url%>" type="audio/mpeg"></audio>
+    </script>
+
      <script type="text/template" id="template-youtube-video">
         <iframe id="ytplayer" type="text/html" src="http://www.youtube.com/embed/<%-data.id%>?autoplay=0" frameborder="0"></iframe>
     </script>
