@@ -25,13 +25,13 @@ var NotesView = Backbone.View.extend({
         $.each(this.notes.models, function(i,e){
             e.set('col', i%6);
             e.set('row', i+1);
-            
+
             var item = $(template( { data: e.attributes }, {escape: false}));
             $(that.el).append( item );
             $(item).find('div.note').html(that.md.render(e.get('note')));
 
             if(e.get('content')!==undefined) {
-                // if(e.get('class')=="spotify"){
+                // if(e.get('class')=="goodreads"){
                 //     console.log(e);
                 // }
                 var contentTemplate = _.template($('#template-' + e.get('class') + '-' + e.get('type')).html());
@@ -60,3 +60,5 @@ $(window).ready(function(){
         el: 'ul#articles'
     });
 });
+
+

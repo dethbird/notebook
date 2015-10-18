@@ -19,11 +19,9 @@ classes:
     goodreads:
       items:
         book:
-          ids:
-            - 3487238764
-            - 2394763274
-            - 23746328746
-    google_docs:
+          content:
+            - >
+              https://www.goodreads.com/book/show/375802?format=xml&key=gyMvEx2C09xhl3jnfAlA
       items:
         document:
           ids:

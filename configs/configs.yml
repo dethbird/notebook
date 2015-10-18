@@ -3,13 +3,16 @@ site:
   title: "Notebook"
   description: "Personal pages"
   url: "http://notebook.artistcontrolbox.com"
+goodreads:
+  key: "gyMvEx2C09xhl3jnfAlA"
+  secret: "batllP8uQGkCANsFSTM7qFrH32KS8xNkhrT1fohqjVI"
 google_api:
   key: "AIzaSyCybIgvVt-vmF47yFzmKqGYXHe8r1LOzJs"
 instagram:
   client_id: "a6c4e37cd91b4020a09a74a40cf836d6"
   user_id: "363053413"
 wordpress:
-    url: http://blog.mailthehorse.com 
+    url: http://blog.mailthehorse.com
 mailchimp:
     key: "bc34c45d07d6cf11bb2f224274d6f932-us10"
     lists:

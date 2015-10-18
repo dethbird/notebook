@@ -10,6 +10,8 @@
 	{{ parent() }}
 
     <!-- CONTAINER -->
+
+
     <div class="gridster">
         <ul id="articles">
         </ul>
@@ -23,6 +25,10 @@
             <div class="content"></div>
             <div class="note"></div>
         </li>
+    </script>
+
+    <script type="text/template" id="template-goodreads-book">
+        <img src="<%-data.book.image_url%>" />
     </script>
 
     <script type="text/template" id="template-instagram-photo">

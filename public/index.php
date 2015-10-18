@@ -34,6 +34,12 @@ $configs = Yaml::parse(file_get_contents("../configs/configs.yml"));
 $app->container->set('configs', $configs);
 
 
+
+/**
+ * MOCK DATA
+ * Using mock-data-types.yml to fake content
+ */
+
 // data
 $mockDataConfigs = Yaml::parse(file_get_contents("../configs/mock-data-types.yml"));
 // echo "<pre>".print_r($mockDataConfigs,1)."</pre>"; die();
@@ -54,12 +60,20 @@ for($i=0; $i<$mockDataConfigs['count']; $i++){
 
     if (isset($mockDataConfigs['classes'][$class]['items'][$itemType]['content'])) {
         $contentIndex = array_rand($mockDataConfigs['classes'][$class]['items'][$itemType]['content']);
-        $data->content = json_decode($mockDataConfigs['classes'][$class]['items'][$itemType]['content'][$contentIndex]);
+        if($class=="goodreads") {
+            $xmlObject = simplexml_load_file($mockDataConfigs['classes'][$class]['items'][$itemType]['content'][$contentIndex], null, LIBXML_NOCDATA);
+            $data->content = json_decode(json_encode($xmlObject));
+        } else {
+            $data->content = json_decode($mockDataConfigs['classes'][$class]['items'][$itemType]['content'][$contentIndex]);
+        }
+
     }
     $mockData[] = $data;
 }
 $app->container->set('data', $mockData);
 // echo "<pre>".print_r($mockData,1)."</pre>"; die();
+
+
 
 
 // This is where a persistence layer ACL check would happen on authentication-related HTTP request items
