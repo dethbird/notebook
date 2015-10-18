@@ -19,15 +19,18 @@ ul#articles > li > icon {
   margin: 0px 10px 10px 0px;
   float:left;
 }
-ul#articles > li[data-sizex="1"] div.content img {
+ul#articles > li[data-sizex="1"] div.content img,
+ul#articles > li[data-sizex="1"] div.content iframe {
   max-width:95px;
   height: auto;
 }
-ul#articles > li[data-sizex="2"] div.content img {
+ul#articles > li[data-sizex="2"] div.content img,
+ul#articles > li[data-sizex="2"] div.content iframe {
   max-width:200px;
   height: auto;
 }
-ul#articles > li[data-sizex="3"] div.content img {
+ul#articles > li[data-sizex="3"] div.content img,
+ul#articles > li[data-sizex="3"] div.content iframe {
   max-width:300px;
   height: auto;
 }

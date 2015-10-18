@@ -50,9 +50,9 @@ for($i=0; $i<$mockDataConfigs['count']; $i++){
     $data->id = uniqid();
     $data->sizex = rand(1,$mockDataConfigs['max-sizex']);
     $data->sizey = rand(1,$mockDataConfigs['max-sizey']);
-    $data->note = "#### title\n\n* farts\n* pizza";
+    $data->note = "asdfisdfisdfh";
 
-    if($class=='instagram' && $itemType=='photo') {
+    if (in_array($class, array("instagram", "youtube"))) {
         $contentIndex = array_rand($mockDataConfigs['classes'][$class]['items'][$itemType]['content']);
         $data->content = json_decode($mockDataConfigs['classes'][$class]['items'][$itemType]['content'][$contentIndex]);
     }

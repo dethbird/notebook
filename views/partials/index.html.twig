@@ -28,5 +28,12 @@
     <script type="text/template" id="template-instagram-photo">
         <img src="<%-data.thumbnail_url%>" />
     </script>
+    <script type="text/template" id="template-instagram-video">
+        <img src="<%-data.thumbnail_url%>" />
+    </script>
+
+     <script type="text/template" id="template-youtube-video">
+        <iframe id="ytplayer" type="text/html" src="http://www.youtube.com/embed/<%-data.id%>?autoplay=0" frameborder="0"></iframe>
+    </script>
 
 {% endblock %}
